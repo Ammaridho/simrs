@@ -6,6 +6,7 @@ $kd_obat = $_GET['kd_obat'];
 <html>
 <head>
 <title>Tambah Kandungan Obat</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script>
 function startCalc(){
 interval = setInterval("calc()",1);
@@ -35,16 +36,16 @@ clearInterval(interval);
 </tr>
 <tr bgcolor="#FFFFFF"> 
   <td width="33%">Nama bahan </td>
-  <td width="67%"><input name="nama_bahan" type="text" size="35" maxlength="200" value="" placeholder="Nama bahan obat"></td>
+  <td width="67%"><input class="form-control" name="nama_bahan" type="text" size="35" maxlength="200" value="" placeholder="Nama bahan obat"></td>
 </tr>
 <tr bgcolor="#FFFFFF"> 
   <td>Keterangan</td>
-  <td><input name="keterangan" type="text" size="35" maxlength="200" value="" placeholder="Keterangan"></td>
+  <td><input class="form-control" name="keterangan" type="text" size="35" maxlength="200" value="" placeholder="Keterangan"></td>
 </tr>
 <tr bgcolor="#FFFFFF"> 
   <td>&nbsp;</td>
   <td> 
-	<input name="Submit" type="submit" value="Tambah">  </td>
+	<button type="submit" name="Hapus" class="btn btn-primary">Tambah</button>
 </tr>
 </table>
 </form>

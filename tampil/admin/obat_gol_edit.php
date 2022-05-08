@@ -10,6 +10,7 @@ $data = mysqli_fetch_array($qry);
 <html>
 <head>
 <title>Update Daftar Obat</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script>
 function startCalc(){
 interval = setInterval("calc()",1);
@@ -28,24 +29,24 @@ clearInterval(interval);
 </head>
 <body>
 <form action="obat_gol_edit_sim.php" method="post" name="form1" target="_self">
-<table width="100%"  border="0" align="left" cellpadding="3" cellspacing="1" bgcolor="#DBEAF5">
+<table class="table" width="100%"  border="0" align="left" cellpadding="3" cellspacing="1" bgcolor="#DBEAF5">
 <tr align="left"> 
   <th colspan="2" scope="col">UPDATE DAFTAR OBAT </th>
 </tr>
 <tr bgcolor="#FFFFFF"> 
   <td width="33%">Kode Golongan Obat </td>
   <td width="67%">
-	<input name="kd_gol_obat" type="hidden" size="22" maxlength="10" value="<?php echo $data['kd_gol_obat']; ?>">
-        <input name="kd_gol_obat" type="text" size="22" maxlength="35" value="<?php echo $data['kd_gol_obat']; ?>" disabled="disabled">  </td>
+	  <input name="kd_gol_obat" type="hidden" size="35" maxlength="10" value="<?php echo $data['kd_gol_obat']; ?>">
+    <input class="form-control" name="kd_gol_obat" type="text" size="35" maxlength="35" value="<?php echo $data['kd_gol_obat']; ?>" disabled="disabled">  </td>
 </tr>
 <tr bgcolor="#FFFFFF"> 
   <td>Nama Golongan Obat </td>
-  <td><input name="gol_obat" type="text" size="35" maxlength="200" value="<?php echo $data['gol_obat']; ?>">  </td>
+  <td><input class="form-control" name="gol_obat" type="text" size="35" maxlength="200" value="<?php echo $data['gol_obat']; ?>">  </td>
 </tr>
 <tr bgcolor="#FFFFFF"> 
   <td>&nbsp;</td>
   <td> 
-	<input name="Submit" type="submit" value="Update">  </td>
+	<button type="submit" name="Submit" class="btn btn-primary">Update</button></td>
 </tr>
 </table>
 </form>

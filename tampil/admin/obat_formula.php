@@ -46,6 +46,7 @@ if ($_GET['action'] == "del")
 ?>
 <html>
 <head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script type="text/javascript">
 
   function pilihan()
@@ -88,16 +89,17 @@ win = window.open(mypage,myname,settings)
 </head>
 <body>
 <form name="myform" method="post" action="<?php $_SERVER['PHP_SELF']; ?>?action=del&kd_obat=<?php echo $kd_obat;?>">
-<table width="100%"  border="0" align="left" cellpadding="3" cellspacing="1" bgcolor="#DBEAF5">
+<table class="table" width="100%"  border="0" align="left" cellpadding="3" cellspacing="1" bgcolor="#DBEAF5">
 <tr align="left"> 
   <th colspan="4" scope="col">NAMA FORMULA OBAT : <?php echo $data['nama_obat']; ?></th>
 </tr>
 <tr bgcolor="#FFFFFF">
-  <td colspan="4"><a href="tambah_formula_obat.php?kd_obat=<?php echo $kd_obat;?>" onClick="NewWindow(this.href,'name','800','400','yes');return false"><b>+ Tambah </b>
-</a></td>
+  <td colspan="4"><a href="tambah_formula_obat.php?kd_obat=<?php echo $kd_obat;?>" onClick="NewWindow(this.href,'name','800','400','yes');return false"><button class="btn btn-primary">Tambah</button> 
+</a>
+<a href="tambah_gol_obat.php"></a></td>
   </tr>
   <tr bgcolor="#FFFFFF">
-  <td><input type="checkbox" name="pilih" onClick="pilihan()" /></td>
+  <td><input class="form-check-input" type="checkbox" name="pilih" onClick="pilihan()" /></td>
   <td width="8%">Kode Obat </td>
   <td width="15%">Nama Bahan </td>
   <td width="74%">Keterangan</td>
@@ -123,8 +125,8 @@ while ($data2 = mysqli_fetch_array($qry2)) {
   <td>&nbsp;</td>
   <td colspan="3">
   <input type="hidden" name="n" value="<?php echo $i;?>"/>
-  <input type="submit" name="submit" value="Update" onClick="myform.action='<?php $_SERVER['PHP_SELF']; ?>?action=update&kd_obat=<?php echo $data['kd_obat'];?>'; return true;" title="Update nama bahan">
-    <input type="submit" value="Hapus" name="submit"></td>
+  <button type="submit" name="Submit" class="btn btn-primary" onClick="myform.action='<?php $_SERVER['PHP_SELF']; ?>?action=update&kd_obat=<?php echo $data['kd_obat'];?>'; return true;">Update</button>
+  <button type="submit" name="Submit" class="btn btn-primary">Hapus</button></td></td>
 </tr>
 </table>
 </form>

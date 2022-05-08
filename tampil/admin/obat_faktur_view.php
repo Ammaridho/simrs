@@ -4,25 +4,26 @@ include_once "../librari/inc.session.php";
 ?>
 <html>
 <head>
-<script language="javascript">
-var win = null;
-function NewWindow(mypage,myname,w,h,scroll){
-LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
-TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
-settings =
-'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
-win = window.open(mypage,myname,settings)
-}
-</script>
+  <script language="javascript">
+  var win = null;
+  function NewWindow(mypage,myname,w,h,scroll){
+  LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+  TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+  settings =
+  'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+  win = window.open(mypage,myname,settings)
+  }
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <title>FAKTUR OBAT</title></head>
 <body>
-  <table align="center" width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CCCCCC">
+  <table class="table" align="center" width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
-      <td colspan="5" bgcolor="#CCCCCC"><div align="left"><strong>RIWAYAT PENAMBAHAN  OBAT </strong></div></td>
+      <td colspan="5" bgcolor="#CCCCCC"><div align="left"><strong>RIWAYAT PENAMBAHAN OBAT </strong></div></td>
     </tr>
 	    
     <tr bgcolor="#FFFFFF">
-      <td colspan="5" bgcolor="#FFFFFF"><a href="obat_faktur_tambah.php" title="Tambah faktur pembelian" onClick="NewWindow(this.href,'name','800','400','yes');return false"><img src="../../media/image/file_add.png" width="20" height="20">Tambah</a></td>
+      <td colspan="5" bgcolor="#FFFFFF"><a href="obat_faktur_tambah.php" title="Tambah faktur pembelian" onClick="NewWindow(this.href,'name','800','400','yes');return false"><button class="btn btn-primary">Tambah</button> </a></td>
     </tr>
     <tr bgcolor="#FFFFFF">
       <td width="6%" bgcolor="#D9E8F3">&nbsp;</td>

@@ -1,3 +1,3 @@
 <?php
-$url = "http://localhost/simrs/simrs/";
+$url = "http://localhost/simrs/";
 ?>

@@ -1,6 +1,6 @@
 <?php
 $dbUser = "root";
-$dbPass = "";
+$dbPass = "12345678";
 $dbName = "klinikdb";
 $dbHost = "localhost";
 

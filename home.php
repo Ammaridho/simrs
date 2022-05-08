@@ -4,11 +4,6 @@ include_once "tampil/librari/inc.session.php";
 $sql = "SELECT * FROM data_klinik";
 $qry = mysqli_query($koneksi,$sql);
 $data = mysqli_fetch_array($qry); 
-
-// if ($koneksi->connect_error) {
-//     // jika terjadi error, matikan proses dengan die() atau exit();
-//     die('Maaf koneksi gagal: '. $koneksi->connect_error);
-// }
 ?>
 <html>
 <head>
@@ -17,18 +12,16 @@ $data = mysqli_fetch_array($qry);
 <title><?php echo $_SESSION['nama'];?>@<?php echo $data['nama_klinik'];?></title>
 </head>
 <frameset rows="40, *" framespacing="0" frameborder="1" border="0">
-
 <!-- frame atas --> 
 <frame src="head.php" name="topFrame" id="topFrame" scrolling="No" noresize="noresize"/> 
 
 
 <frameset cols="20%, *"> 
-<!-- frame kiri --> 
+<!-frame kiri --> 
 <frame src="media/sidebar/index.php" name="leftFrame" id="leftFrame" scrolling="No"noresize="noresize"/>  
 
 <!-- frame tengah --> 
 <frame src="tampil/index.php" name="mainFrame" id="mainFrame" noresize="noresize"/> 
-
 <!-- Ini ditampilkan jika browser tidak support frame --> 
 <noframes> 
 Browser Tidak Suport Frame 

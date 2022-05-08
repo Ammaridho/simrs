@@ -25,6 +25,7 @@ if ($_GET['action'] == "del")
 <html>
 <head>
 <title>ORDER LABORATORIUM</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <style type="text/css">
 <!--
 a:link {
@@ -85,11 +86,11 @@ win = window.open(mypage,myname,settings)
 </script>
 </head>
 <body>
-<a href="labdb_tambah.php" onClick="NewWindow(this.href,'name','800','400','yes');return false"><b>+ Tambah</b></a>
+<a href="labdb_tambah.php" onClick="NewWindow(this.href,'name','800','400','yes');return false"><button class="btn btn-primary">Tambah</button></a>
 <form name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>?&action=del">
-<table width="99%" height="81" border="0" align="left" cellpadding="2" cellspacing="1" bgcolor="#CCCCCC">
+<table class="table" width="99%" height="81" border="0" align="left" cellpadding="2" cellspacing="1" bgcolor="#CCCCCC">
 <tr bgcolor="#FFFFFF">
-     	<td width="4%" height="23" align="center" bgcolor="#D9E8F3"><input type="checkbox" name="pilih" onClick="pilihan()" /></td>
+     	<td width="4%" height="23" align="center" bgcolor="#D9E8F3"><input class="form-check-input" type="checkbox" name="pilih" onClick="pilihan()" /></td>
      	<td width="38%" align="center" bgcolor="#D9E8F3"><strong>Item laboratorium </strong></td>
       	<td width="13%" align="center" bgcolor="#D9E8F3"><strong>Nilai atas </strong></td>
       	<td width="12%" align="center" bgcolor="#D9E8F3"><strong>Nilai Bawah </strong></td>
@@ -122,8 +123,8 @@ while ($data = mysqli_fetch_array($hasil))
     <tr bgcolor="#FFFFFF">
       	<td width="4%" height="28" bgcolor="#FFFFFF"><input type="hidden" name="n" value="<?php echo $i; ?>" /></td>
       	<td colspan="5" bgcolor="#FFFFFF">
-		<input type="submit" name="submit" value="Update" onClick="form1.action='labdb_edit_sim.php'; return true;">
-        <input type="submit" value="Hapus" name="submit">
+		    <button type="submit" name="Submit" class="btn btn-primary" onClick="form1.action='labdb_edit_sim.php'; return true;">Tambah</button>
+        <button type="submit" name="Hapus" class="btn btn-primary">Hapus</button>
 		</td>
     </tr>
 </table>

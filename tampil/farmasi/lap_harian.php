@@ -6,6 +6,7 @@ include "../librari/inc.resolusi.php";
 <html>
 <head>
 <title>LAPORAN HARIAN FARMASI</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style type="text/css">
 <!--
 a:link {
@@ -52,7 +53,7 @@ win = window.open(mypage,myname,settings)
 <h3><div align="center">LAPORAN HARIAN FARMASI</div></h3>
 <div align="center">Tanggal : <?php echo "".date('d-m-Y') ;?></div>
 <form>
-<table align="center" width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CCCCCC">
+<table class="table table-striped" align="center" width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CCCCCC">
  <tr bgcolor="#CCCCCC">
    <td bgcolor="#CCCCCC" align="center">Nama Obat </td>
    <td bgcolor="#CCCCCC" align="center">Qty</td>
@@ -121,7 +122,8 @@ echo "</br>";
 echo "".$_SESSION['nama']."";
 echo "</br>";
 ?>
-    <input class="noPrint" type="button" value="Print" onClick="window.print()">
+<button class="btn btn-primary" onClick="window.print()">Print</button>
+    <!-- <input class="noPrint" type="button" value="Print" onClick="window.print()"> -->
 </form>
 </body>
 </html>

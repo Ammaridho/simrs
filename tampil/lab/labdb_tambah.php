@@ -6,6 +6,7 @@ include_once "../librari/inc.session.php";
 <html>
 <head>
 <title>TAMBAH DATABASE LABORATORIUM</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <style type="text/css">
 <!--
 a:link {
@@ -29,7 +30,7 @@ a:active {
 </head>
 <body id="tab2">
 </hr>
-  <table align="left" width="99%" border="0" cellpadding="2" cellspacing="1" bgcolor="#DBEAF5">
+  <table class="table" align="left" width="99%" border="0" cellpadding="2" cellspacing="1" bgcolor="#DBEAF5">
   <form name="form1" method="post" action="labdb_sim.php">
       <tr bgcolor="#FFFFFF">
      	<td colspan="2" bgcolor="#D9E8F3">TAMBAH DATABASE LABORATORIUM</td>
@@ -67,26 +68,26 @@ a:active {
   </tr>
   <tr bgcolor="#FFFFFF">
    	  <td width="30%" bgcolor="#FFFFFF">Nama pemeriksaan </td>
-      	<td align="left" bgcolor="#FFFFFF"><input type="text" name="nama_lab"></td>
+      	<td align="left" bgcolor="#FFFFFF"><input class="form-control" type="text" name="nama_lab"></td>
 	</tr>
     <tr bgcolor="#FFFFFF">
       <td bgcolor="#FFFFFF">Nilai normal atas </td>
-      <td colspan="2" bgcolor="#FFFFFF"><input type="text" name="nilai_atas"></td>
+      <td colspan="2" bgcolor="#FFFFFF"><input class="form-control" type="text" name="nilai_atas"></td>
     </tr>
     <tr bgcolor="#FFFFFF">
       <td bgcolor="#FFFFFF">Nilai normal bawah </td>
-      <td colspan="2" bgcolor="#FFFFFF"><input type="text" name="nilai_bawah"></td>
+      <td colspan="2" bgcolor="#FFFFFF"><input class="form-control" type="text" name="nilai_bawah"></td>
     </tr>
     <tr bgcolor="#FFFFFF">
       <td bgcolor="#FFFFFF">Harga</td>
-      <td colspan="2" bgcolor="#FFFFFF"><input type="text" name="harga_lab"></td>
+      <td colspan="2" bgcolor="#FFFFFF"><input class="form-control" type="text" name="harga_lab"></td>
     </tr>
     <tr bgcolor="#FFFFFF">
       <td bgcolor="#FFFFFF">Discount</td>
-      <td colspan="2" bgcolor="#FFFFFF"><input type="text" name="discount"></td>
+      <td colspan="2" bgcolor="#FFFFFF"><input class="form-control" type="text" name="discount"></td>
     </tr>
     <tr bgcolor="#FFFFFF">
-   	  <td width="30%" bgcolor="#FFFFFF"><input type="submit" name="Submit" value="Tambahkan"></td>
+   	  <td width="30%" bgcolor="#FFFFFF"><button type="submit" name="Hapus" class="btn btn-primary">Tambah</button></td>
       	<td colspan="2" bgcolor="#FFFFFF">&nbsp;</td>
     </tr>
 	  </form>

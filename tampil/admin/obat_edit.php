@@ -10,6 +10,7 @@ $data = mysqli_fetch_array($qry);
 <html>
 <head>
 <title>Update Daftar Obat</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script>
 function startCalc(){
 interval = setInterval("calc()",1);
@@ -28,15 +29,15 @@ clearInterval(interval);
 </head>
 <body>
 <form action="obat_edit_sim.php" method="post" name="form1" target="_self">
-<table width="100%"  border="0" align="left" cellpadding="3" cellspacing="1" bgcolor="#DBEAF5">
+<table class="table" width="100%"  border="0" align="left" cellpadding="3" cellspacing="1" bgcolor="#DBEAF5">
 <tr align="left"> 
   <th colspan="2" scope="col">UPDATE DAFTAR OBAT </th>
 </tr>
 <tr bgcolor="#FFFFFF"> 
-  <td width="33%">Kode Obat </td>
+  <td width="33%">Kode Obat</td>
   <td width="67%">
-	<input name="kd_obat" type="hidden" size="22" maxlength="10" value="<?php echo $data['kd_obat']; ?>">
-        <input name="kd_obat" type="text" size="22" maxlength="35" value="<?php echo $data['kd_obat']; ?>" disabled="disabled">  </td>
+	<input name="kd_obat" type="hidden" size="35" maxlength="10" value="<?php echo $data['kd_obat']; ?>">
+        <input name="kd_obat" type="text" size="35" maxlength="35" value="<?php echo $data['kd_obat']; ?>" disabled="disabled">  </td>
 </tr>
 <tr bgcolor="#FFFFFF"> 
   <td>Golongan</td>
@@ -49,26 +50,26 @@ clearInterval(interval);
 
 <tr bgcolor="#FFFFFF"> 
   <td>Harga Beli</td>
-  <td><input name="harga_beli" type="text" size="10" maxlength="200" value="<?php echo $data['harga_beli']; ?>"  onFocus="startCalc();" onBlur="stopCalc();">  </td>
+  <td><input name="harga_beli" type="text" size="35" maxlength="200" value="<?php echo $data['harga_beli']; ?>"  onFocus="startCalc();" onBlur="stopCalc();">  </td>
 </tr>
 <tr bgcolor="#FFFFFF"> 
   <td>Markup</td>
-  <td><input name="markup" type="text" size="1" value="<?php echo $data['markup']; ?>" onFocus="startCalc();" onBlur="stopCalc();">
+  <td><input name="markup" type="text" size="35" value="<?php echo $data['markup']; ?>" onFocus="startCalc();" onBlur="stopCalc();">
     %</td>
 </tr>
 <tr bgcolor="#FFFFFF">
   <td>Ppn</td>
-  <td><input name="ppn" type="text" size="1" value="<?php echo $data['ppn']; ?>" onFocus="startCalc();" onBlur="stopCalc();">
+  <td><input name="ppn" type="text" size="35" value="<?php echo $data['ppn']; ?>" onFocus="startCalc();" onBlur="stopCalc();">
     %</td>
 </tr>
 <tr bgcolor="#FFFFFF"> 
   <td>Harga Jual</td>
-  <td><input name="harga_jual" type="text" size="10" maxlength="200" value="<?php echo $data['harga_jual']; ?>"></td>
+  <td><input name="harga_jual" type="text" size="35" maxlength="200" value="<?php echo $data['harga_jual']; ?>"></td>
 </tr>
 <tr bgcolor="#FFFFFF"> 
   <td>&nbsp;</td>
   <td> 
-	<input name="Submit" type="submit" value="Update">  </td>
+	<button type="submit" name="Submit" class="btn btn-primary">Update</button></td>
 </tr>
 </table>
 </form>

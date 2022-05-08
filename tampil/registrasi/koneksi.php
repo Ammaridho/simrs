@@ -6,7 +6,7 @@
  $dbhost = 'localhost'; 
  $dbuser = 'root';     // ini berlaku di xampp
  $dbpass = '';         // ini berlaku di xampp
- $dbname = 'klinikdb';
+ $dbname = 'simrs';
  
 // melakukan koneksi ke database
  $koneksi = new mysqli($dbhost,$dbuser,$dbpass,$dbname);

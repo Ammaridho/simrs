@@ -5,6 +5,8 @@ include_once "../librari/inc.session.php";
 <html>
 <head>
 <title>DAFTAR OBAT</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/64c79ef594.js" crossorigin="anonymous"></script>
 <style type="text/css">
 <!--
 .style1 {color: #FF0000}
@@ -12,12 +14,12 @@ include_once "../librari/inc.session.php";
 </style>
 </head>
 <body>
-  <table align="center" width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CCCCCC">
+  <table class="table" align="center" width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
       <td colspan="8" bgcolor="#CCCCCC"><div align="left"><strong>DAFTAR OBAT </strong></div></td>
     </tr>
 	    <tr bgcolor="#FFFFFF">
-      <td  colspan="8"><a href="tambah_obat.php">Tambah</a></td>
+      <td  colspan="8"><a href="tambah_gol_obat.php"><button class="btn btn-primary">Tambah</button></a></td>
     </tr>
     <tr bgcolor="#FFFFFF">
       <td width="10%" bgcolor="#D9E8F3"><div align="center"><strong>KODE</strong></div></td>
@@ -46,14 +48,14 @@ include_once "../librari/inc.session.php";
 	  <td align="center"><?php echo $data['ppn'];?>%</td>
 	  <td align="right"><?php echo $data['harga_jual'];?></td>
 
-      <td><div align="center"><a href="obat_edit.php?kdubah=<?php echo $data['kd_obat']; ?>">Edit nama</a> |
+      <td><div align="center"><a href="obat_edit.php?kdubah=<?php echo $data['kd_obat']; ?>"><i class="fa-solid fa-pen-to-square"></i></a> |
 	  <?php 
 	  $gol_obat = $data['gol_obat'];
 	  if ($gol_obat=="Formula"){
-	  echo	"<a href='obat_formula.php?kd_obat=".$data['kd_obat']."'>Update isi</a>";
+	  echo	"<a href='obat_formula.php?kd_obat=".$data['kd_obat']."'><i class='fa-solid fa-pen'></i></a>";
 	  }
 	  else {
-	  echo "Update isi";
+	  echo "<i class='fa-solid fa-pen'></i>";
 	  }
 	  ?>
 	  </div></td>
