@@ -1,0 +1,4 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^hendisoft\.cloud\.ppnitangsel\.org$
+RewriteRule ^/?$ "https\:\/\/hendisoft\.cloud\/" [R=301,L]
